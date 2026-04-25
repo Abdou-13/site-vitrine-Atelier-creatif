@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH Connect — Application de Gestion des Ressources Humaines</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Progress bar -->
+<div id="progress-bar"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="logo-badge">RH</div>
+      RH Connect
+    </div>
+    <div class="nav-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#presentation">À propos</a>
+      <a href="#modules">Modules</a>
+      <a href="#fonctionnement">Fonctionnement</a>
+      <a href="#guide">Guide</a>
+      <a href="#glossaire">Glossaire</a>
+      <a href="#faq">FAQ</a>
+      <a href="#equipe" class="nav-cta">Équipe</a>
+    </div>
+    <div class="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#accueil"        onclick="closeMenu()">Accueil</a>
+    <a href="#presentation"   onclick="closeMenu()">À propos</a>
+    <a href="#modules"        onclick="closeMenu()">Modules</a>
+    <a href="#fonctionnement" onclick="closeMenu()">Fonctionnement</a>
+    <a href="#guide"          onclick="closeMenu()">Guide</a>
+    <a href="#glossaire"      onclick="closeMenu()">Glossaire</a>
+    <a href="#faq"            onclick="closeMenu()">FAQ</a>
+    <a href="#equipe"         onclick="closeMenu()">Équipe</a>
+  </div>
+</nav> 
+<section id="accueil">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-texte">
+      <div class="hero-badge"><span></span> Projet ISI — L2 IAGE — 2025</div>
+      <h1 class="hero-titre">Gérez vos<br>Ressources Humaines<br><em>intelligemment</em></h1>
+      <p class="hero-sous-titre">
+        RH Connect est une application complète qui centralise toute la gestion du personnel
+        dans un seul outil : fiches employés, paie, congés, recrutement, formations et évaluations.
+      </p>
+      <div class="hero-btns">
+        <a href="#modules" class="btn-primaire">Découvrir les modules ↓</a>
+        <a href="#guide"   class="btn-secondaire">Voir le guide d'utilisation</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="chiffre">6</span>
+          <span class="label">Modules intégrés</span>
+        </div>
+        <div class="hero-stat">
+          <span class="chiffre">3</span>
+          <span class="label">Profils utilisateurs</span>
+        </div>
+        <div class="hero-stat">
+          <span class="chiffre">100%</span>
+          <span class="label">Données sécurisées</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Mockup -->
+    <div class="hero-visuel">
+      <div class="dashboard-card">
+        <div class="dash-header">
+          <div class="dash-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="dash-title">RH Connect — Tableau de bord</div>
+        </div>
+        <div class="dash-body">
+          <div class="dash-top">
+            <div class="dash-kpi"><div class="val">142</div><div class="lbl">Employés</div></div>
+            <div class="dash-kpi"><div class="val">8</div><div class="lbl">Recrutements</div></div>
+            <div class="dash-kpi"><div class="val">23</div><div class="lbl">Congés</div></div>
+          </div>
+          <div class="dash-modules">
+            <div class="dash-mod"><span class="ico">👥</span> Employés</div>
+            <div class="dash-mod"><span class="ico">💰</span> Paie</div>
+            <div class="dash-mod"><span class="ico">🏖️</span> Congés</div>
+            <div class="dash-mod"><span class="ico">📋</span> Recrutement</div>
+            <div class="dash-mod"><span class="ico">🎓</span> Formations</div>
+            <div class="dash-mod"><span class="ico">⭐</span> Évaluations</div>
+          </div>
+          <div class="dash-bar-wrap">
+            <div class="dash-bar-label"><span>Effectif actif</span><span>89%</span></div>
+            <div class="dash-bar"><div class="dash-bar-fill" style="width:89%"></div></div>
+            <div class="dash-bar-label" style="margin-top:8px"><span>Formations complétées</span><span>67%</span></div>
+            <div class="dash-bar"><div class="dash-bar-fill" style="width:67%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
