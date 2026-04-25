@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH Connect — Application de Gestion des Ressources Humaines</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Progress bar -->
+<div id="progress-bar"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="logo-badge">RH</div>
+      RH Connect
+    </div>
+    <div class="nav-links">
+      <a href="#modules">Modules</a>
+      <a href="#fonctionnement">Fonctionnement</a>
+      <a href="#guide">Guide</a>
+      <a href="#glossaire">Glossaire</a>
+      <a href="#faq">FAQ</a>
+      <a href="#equipe" class="nav-cta">Équipe</a>
+    </div>
+    <div class="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<section id="modules">
+  <div class="section-inner">
+    <div class="section-tag">Les fonctionnalités</div>
+    <h2 class="section-titre">Les 6 modules de RH Connect</h2>
+    <p class="section-sous">Chaque module couvre un aspect précis de la gestion RH. Ensemble, ils forment un système complet et cohérent.</p>
+
+    <div class="modules-grid">
+
+      <!-- Module 1 -->
+      <div class="module-card mod-1 reveal">
+        <div class="module-header">
+          <div class="module-num">01</div>
+          <div class="module-ico">👥</div>
+          <div class="module-titre">Gestion des Employés</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Le cœur de l'application. Toutes les informations sur chaque membre du personnel sont stockées et organisées ici.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Créer et modifier des fiches employés</div>
+            <div class="module-fonction">Gérer les contrats (CDI, CDD, stage)</div>
+            <div class="module-fonction">Suivre les documents administratifs</div>
+            <div class="module-fonction">Archiver les dossiers des anciens employés</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Données personnelles</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="module-card mod-2 reveal">
+        <div class="module-header">
+          <div class="module-num">02</div>
+          <div class="module-ico">💰</div>
+          <div class="module-titre">Paie & Salaires</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Calcul automatique des salaires, édition des bulletins de paie et suivi des virements chaque mois.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Calcul automatique des salaires bruts/nets</div>
+            <div class="module-fonction">Génération des bulletins de paie PDF</div>
+            <div class="module-fonction">Gestion des primes et retenues</div>
+            <div class="module-fonction">Historique complet des paiements</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Comptabilité RH</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="module-card mod-3 reveal">
+        <div class="module-header">
+          <div class="module-num">03</div>
+          <div class="module-ico">🏖️</div>
+          <div class="module-titre">Congés & Absences</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Suivi en temps réel des jours de congé, demandes en ligne et validation par les responsables.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Demandes de congé en ligne</div>
+            <div class="module-fonction">Validation ou refus par le responsable</div>
+            <div class="module-fonction">Calcul automatique des soldes</div>
+            <div class="module-fonction">Suivi des absences injustifiées</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Planning RH</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="module-card mod-4 reveal">
+        <div class="module-header">
+          <div class="module-num">04</div>
+          <div class="module-ico">📋</div>
+          <div class="module-titre">Recrutement</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Gérez tout le processus de recrutement, de la publication du poste à l'intégration du nouvel employé.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Publication d'offres d'emploi</div>
+            <div class="module-fonction">Réception et tri des candidatures</div>
+            <div class="module-fonction">Planification des entretiens</div>
+            <div class="module-fonction">Intégration automatique du candidat retenu</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Acquisition de talents</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 5 -->
+      <div class="module-card mod-5 reveal">
+        <div class="module-header">
+          <div class="module-num">05</div>
+          <div class="module-ico">🎓</div>
+          <div class="module-titre">Formations</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Planifiez et suivez les formations pour développer les compétences de votre équipe en continu.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Création de plans de formation</div>
+            <div class="module-fonction">Inscription et suivi des participants</div>
+            <div class="module-fonction">Gestion du budget formation</div>
+            <div class="module-fonction">Attestations et certifications</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Développement RH</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 6 -->
+      <div class="module-card mod-6 reveal">
+        <div class="module-header">
+          <div class="module-num">06</div>
+          <div class="module-ico">⭐</div>
+          <div class="module-titre">Évaluations</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Organisez les entretiens annuels et suivez l'évolution des performances de chaque collaborateur.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Création de grilles d'évaluation</div>
+            <div class="module-fonction">Entretiens annuels en ligne</div>
+            <div class="module-fonction">Suivi des objectifs fixés</div>
+            <div class="module-fonction">Historique des performances</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Performance</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FONCTIONNEMENT ===== -->
+<section id="fonctionnement">
+  <div class="section-inner">
+    <div class="section-tag">Comprendre l'application</div>
+    <h2 class="section-titre">Comment fonctionne RH Connect ?</h2>
+    <p class="section-sous">Trois angles pour tout comprendre : le flux d'un processus RH, les rôles des utilisateurs et le cycle de vie d'un employé.</p>
+
+    <div class="fonct-tabs reveal">
+      <button class="tab-btn active" onclick="switchTab('flux')">Flux d'un processus RH</button>
+      <button class="tab-btn"        onclick="switchTab('roles')">Rôles & Accès</button>
+      <button class="tab-btn"        onclick="switchTab('cycle')">Cycle de vie d'un employé</button>
+    </div>
+
+    <!-- TAB 1 : Flux -->
+    <div class="tab-content active" id="tab-flux">
+      <div class="flux-container">
+        <div class="flux-titre">Exemple : Traitement d'une demande de congé</div>
+        <div class="flux-diagram">
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">1</div>
+              <div class="flux-ico-wrap" style="background:#EFF6FF">🙋</div>
+            </div>
+            <div class="flux-label">Demande</div>
+            <div class="flux-sous">L'employé soumet sa demande en ligne</div>
+          </div>
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">2</div>
+              <div class="flux-ico-wrap" style="background:#F0FDF4">🔔</div>
+            </div>
+            <div class="flux-label">Notification</div>
+            <div class="flux-sous">Le responsable RH est alerté automatiquement</div>
+          </div>
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">3</div>
+              <div class="flux-ico-wrap" style="background:#FFFBEB">📊</div>
+            </div>
+            <div class="flux-label">Vérification</div>
+            <div class="flux-sous">Contrôle du solde de congés disponible</div>
+          </div>
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">4</div>
+              <div class="flux-ico-wrap" style="background:#FFF1F2">⚖️</div>
+            </div>
+            <div class="flux-label">Décision</div>
+            <div class="flux-sous">Approbation ou refus motivé du responsable</div>
+          </div>
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">5</div>
+              <div class="flux-ico-wrap" style="background:#F5F3FF">✅</div>
+            </div>
+            <div class="flux-label">Mise à jour</div>
+            <div class="flux-sous">Le planning et le solde sont mis à jour automatiquement</div>
+          </div>
+
+        </div>
+        <div class="flux-note">
+          <strong>À retenir :</strong> Tout ce processus se fait en ligne, sans papier ni e-mail. Chaque action est tracée et peut être consultée à tout moment.
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2 : Rôles -->
+    <div class="tab-content" id="tab-roles">
+      <div class="roles-grid">
+
+        <div class="role-card role-admin reveal">
+          <div class="role-badge">Administrateur</div>
+          <div class="role-titre">L'Administrateur Système</div>
+          <p style="font-size:.85rem;color:var(--gris-moyen);line-height:1.7">Il configure l'application, crée les comptes, définit les paramètres de l'entreprise et gère les droits d'accès.</p>
+          <div class="role-perms">
+            <div class="role-perm"><span class="ok">●</span> Gestion complète des utilisateurs</div>
+            <div class="role-perm"><span class="ok">●</span> Configuration des paramètres</div>
+            <div class="role-perm"><span class="ok">●</span> Accès à tous les modules</div>
+            <div class="role-perm"><span class="ok">●</span> Génération de tous les rapports</div>
+          </div>
+        </div>
+
+        <div class="role-card role-rh reveal">
+          <div class="role-badge">Responsable RH</div>
+          <div class="role-titre">Le Gestionnaire RH</div>
+          <p style="font-size:.85rem;color:var(--gris-moyen);line-height:1.7">Il gère le quotidien RH : fiches employés, paie, congés, recrutement, formations et évaluations.</p>
+          <div class="role-perms">
+            <div class="role-perm"><span class="ok">●</span> Gestion des fiches employés</div>
+            <div class="role-perm"><span class="ok">●</span> Validation des congés</div>
+            <div class="role-perm"><span class="ok">●</span> Traitement de la paie</div>
+            <div class="role-perm"><span class="non">●</span> Paramètres système (restreint)</div>
+          </div>
+        </div>
+
+        <div class="role-card role-emp reveal">
+          <div class="role-badge">Employé</div>
+          <div class="role-titre">Le Collaborateur</div>
+          <p style="font-size:.85rem;color:var(--gris-moyen);line-height:1.7">Il consulte ses propres informations, soumet ses demandes de congé et accède à ses bulletins de paie.</p>
+          <div class="role-perms">
+            <div class="role-perm"><span class="ok">●</span> Consultation de sa fiche</div>
+            <div class="role-perm"><span class="ok">●</span> Demandes de congé en ligne</div>
+            <div class="role-perm"><span class="ok">●</span> Accès à ses bulletins de paie</div>
+            <div class="role-perm"><span class="non">●</span> Données des autres employés</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:32px;padding:20px 24px;background:white;border-radius:var(--r-md);border:1px solid var(--bordure);">
+        <strong style="color:var(--bleu-nuit)">Principe de séparation des accès :</strong>
+        <p style="margin-top:6px;font-size:.875rem;color:var(--gris-moyen);line-height:1.75">
+          Chaque utilisateur n'a accès qu'aux informations dont il a besoin pour faire son travail. Un employé ne peut pas voir le salaire de son collègue. Un responsable RH ne peut pas modifier les paramètres du système. Cette règle garantit la confidentialité et la sécurité des données.
+        </p>
+      </div>
+    </div>
+
+    <!-- TAB 3 : Cycle -->
+    <div class="tab-content" id="tab-cycle">
+      <div class="cycle-wrap">
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">1</div>
+            <div class="cycle-ligne"></div>
+          </div>
+          <div class="cycle-content">
+            <h4>Recrutement</h4>
+            <p>Une offre d'emploi est publiée. Les candidatures arrivent et sont triées dans l'application. Après entretiens, le candidat retenu est sélectionné.</p>
+          </div>
+        </div>
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">2</div>
+            <div class="cycle-ligne"></div>
+          </div>
+          <div class="cycle-content">
+            <h4>Intégration (Onboarding)</h4>
+            <p>Le nouvel employé est automatiquement enregistré dans le système. Sa fiche est créée, son contrat est saisi, ses accès sont configurés.</p>
+          </div>
+        </div>
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">3</div>
+            <div class="cycle-ligne"></div>
+          </div>
+          <div class="cycle-content">
+            <h4>Vie active dans l'entreprise</h4>
+            <p>Chaque mois, son salaire est calculé et son bulletin de paie est généré. Il peut demander des congés, suivre des formations, être évalué chaque année.</p>
+          </div>
+        </div>
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">4</div>
+            <div class="cycle-ligne"></div>
+          </div>
+          <div class="cycle-content">
+            <h4>Évolution de carrière</h4>
+            <p>Ses évaluations et formations sont enregistrées. En cas de promotion ou changement de poste, sa fiche est mise à jour avec l'historique complet.</p>
+          </div>
+        </div>
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">5</div>
+          </div>
+          <div class="cycle-content">
+            <h4>Départ (Offboarding)</h4>
+            <p>Lors d'un départ (démission, retraite, fin de contrat), la fiche est archivée. Le solde de congés est calculé automatiquement pour le solde de tout compte.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html> 
