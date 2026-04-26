@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH Connect — Application de Gestion des Ressources Humaines</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Progress bar -->
+<div id="progress-bar"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="logo-badge">RH</div>
+      RH Connect
+    </div>
+    <div class="nav-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#presentation">À propos</a>
+      <a href="#modules">Modules</a>
+      <a href="#fonctionnement">Fonctionnement</a>
+      <a href="#guide">Guide</a>
+      <a href="#glossaire">Glossaire</a>
+      <a href="#faq">FAQ</a>
+      <a href="#equipe" class="nav-cta">Équipe</a>
+    </div>
+    <div class="burger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#accueil"        onclick="closeMenu()">Accueil</a>
+    <a href="#presentation"   onclick="closeMenu()">À propos</a>
+    <a href="#modules"        onclick="closeMenu()">Modules</a>
+    <a href="#fonctionnement" onclick="closeMenu()">Fonctionnement</a>
+    <a href="#guide"          onclick="closeMenu()">Guide</a>
+    <a href="#glossaire"      onclick="closeMenu()">Glossaire</a>
+    <a href="#faq"            onclick="closeMenu()">FAQ</a>
+    <a href="#equipe"         onclick="closeMenu()">Équipe</a>
+  </div>
+</nav>
+
+<!-- ===== HÉRO ===== -->
+<section id="accueil">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-texte">
+      <div class="hero-badge"><span></span> Projet ISI — L2 IAGE — 2025</div>
+      <h1 class="hero-titre">Gérez vos<br>Ressources Humaines<br><em>intelligemment</em></h1>
+      <p class="hero-sous-titre">
+        RH Connect est une application complète qui centralise toute la gestion du personnel
+        dans un seul outil : fiches employés, paie, congés, recrutement, formations et évaluations.
+      </p>
+      <div class="hero-btns">
+        <a href="#modules" class="btn-primaire">Découvrir les modules ↓</a>
+        <a href="#guide"   class="btn-secondaire">Voir le guide d'utilisation</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="chiffre">6</span>
+          <span class="label">Modules intégrés</span>
+        </div>
+        <div class="hero-stat">
+          <span class="chiffre">3</span>
+          <span class="label">Profils utilisateurs</span>
+        </div>
+        <div class="hero-stat">
+          <span class="chiffre">100%</span>
+          <span class="label">Données sécurisées</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Mockup -->
+    <div class="hero-visuel">
+      <div class="dashboard-card">
+        <div class="dash-header">
+          <div class="dash-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="dash-title">RH Connect — Tableau de bord</div>
+        </div>
+        <div class="dash-body">
+          <div class="dash-top">
+            <div class="dash-kpi"><div class="val">142</div><div class="lbl">Employés</div></div>
+            <div class="dash-kpi"><div class="val">8</div><div class="lbl">Recrutements</div></div>
+            <div class="dash-kpi"><div class="val">23</div><div class="lbl">Congés</div></div>
+          </div>
+          <div class="dash-modules">
+            <div class="dash-mod"><span class="ico">👥</span> Employés</div>
+            <div class="dash-mod"><span class="ico">💰</span> Paie</div>
+            <div class="dash-mod"><span class="ico">🏖️</span> Congés</div>
+            <div class="dash-mod"><span class="ico">📋</span> Recrutement</div>
+            <div class="dash-mod"><span class="ico">🎓</span> Formations</div>
+            <div class="dash-mod"><span class="ico">⭐</span> Évaluations</div>
+          </div>
+          <div class="dash-bar-wrap">
+            <div class="dash-bar-label"><span>Effectif actif</span><span>89%</span></div>
+            <div class="dash-bar"><div class="dash-bar-fill" style="width:89%"></div></div>
+            <div class="dash-bar-label" style="margin-top:8px"><span>Formations complétées</span><span>67%</span></div>
+            <div class="dash-bar"><div class="dash-bar-fill" style="width:67%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRÉSENTATION ===== -->
+<section id="presentation">
+  <div class="section-inner">
+    <div class="pres-grid">
+      <div class="pres-texte reveal">
+        <div class="section-tag">À propos de l'application</div>
+        <h2>Qu'est-ce que RH Connect ?</h2>
+        <p>
+          RH Connect est une application de gestion des ressources humaines conçue pour
+          simplifier le travail des équipes RH. Elle remplace les tableurs éparpillés, les
+          dossiers papier et les e-mails perdus par une plateforme unique, claire et efficace.
+        </p>
+        <p>
+          Développée dans le cadre du projet de L2 Informatique Appliquée à la Gestion des
+          Entreprises à l'ISI de Dakar, elle répond aux besoins concrets des entreprises
+          sénégalaises et africaines.
+        </p>
+        <div class="pres-liste">
+          <div class="pres-liste-item">
+            <span class="check">✓</span>
+            <div>
+              <strong>Centralisation des données</strong>
+              <span>Toutes les informations de vos employés au même endroit, accessibles en quelques clics.</span>
+            </div>
+          </div>
+          <div class="pres-liste-item">
+            <span class="check">✓</span>
+            <div>
+              <strong>Gain de temps considérable</strong>
+              <span>Les tâches répétitives (bulletins de paie, suivi des congés) sont automatisées.</span>
+            </div>
+          </div>
+          <div class="pres-liste-item">
+            <span class="check">✓</span>
+            <div>
+              <strong>Sécurité et contrôle des accès</strong>
+              <span>Chaque utilisateur voit uniquement ce dont il a besoin selon son rôle.</span>
+            </div>
+          </div>
+          <div class="pres-liste-item">
+            <span class="check">✓</span>
+            <div>
+              <strong>Interface intuitive</strong>
+              <span>Prise en main rapide, même sans formation technique préalable.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pres-visuel reveal">
+        <div class="pres-card">
+          <div class="ico">🎯</div>
+          <h4>Objectif principal</h4>
+          <p>Automatiser et centraliser la gestion RH pour libérer du temps pour ce qui compte vraiment : les personnes.</p>
+        </div>
+        <div class="pres-card">
+          <div class="ico">🏢</div>
+          <h4>Profil cible</h4>
+          <p>Entreprises de toutes tailles souhaitant digitaliser leur service RH rapidement.</p>
+        </div>
+        <div class="pres-card">
+          <div class="ico">🔒</div>
+          <h4>Sécurité</h4>
+          <p>Données chiffrées, accès par rôle, historique des actions. Conformité aux normes en vigueur.</p>
+        </div>
+        <div class="pres-card highlight">
+          <div class="ico">🌍</div>
+          <h4>Conçu pour l'Afrique</h4>
+          <p>Adapté aux réalités locales : législation du travail sénégalaise, calcul de paie spécifique, gestion multisite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MODULES ===== -->
+<section id="modules">
+  <div class="section-inner">
+    <div class="section-tag">Les fonctionnalités</div>
+    <h2 class="section-titre">Les 6 modules de RH Connect</h2>
+    <p class="section-sous">Chaque module couvre un aspect précis de la gestion RH. Ensemble, ils forment un système complet et cohérent.</p>
+
+    <div class="modules-grid">
+
+      <!-- Module 1 -->
+      <div class="module-card mod-1 reveal">
+        <div class="module-header">
+          <div class="module-num">01</div>
+          <div class="module-ico">👥</div>
+          <div class="module-titre">Gestion des Employés</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Le cœur de l'application. Toutes les informations sur chaque membre du personnel sont stockées et organisées ici.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Créer et modifier des fiches employés</div>
+            <div class="module-fonction">Gérer les contrats (CDI, CDD, stage)</div>
+            <div class="module-fonction">Suivre les documents administratifs</div>
+            <div class="module-fonction">Archiver les dossiers des anciens employés</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Données personnelles</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="module-card mod-2 reveal">
+        <div class="module-header">
+          <div class="module-num">02</div>
+          <div class="module-ico">💰</div>
+          <div class="module-titre">Paie & Salaires</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Calcul automatique des salaires, édition des bulletins de paie et suivi des virements chaque mois.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Calcul automatique des salaires bruts/nets</div>
+            <div class="module-fonction">Génération des bulletins de paie PDF</div>
+            <div class="module-fonction">Gestion des primes et retenues</div>
+            <div class="module-fonction">Historique complet des paiements</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Comptabilité RH</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="module-card mod-3 reveal">
+        <div class="module-header">
+          <div class="module-num">03</div>
+          <div class="module-ico">🏖️</div>
+          <div class="module-titre">Congés & Absences</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Suivi en temps réel des jours de congé, demandes en ligne et validation par les responsables.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Demandes de congé en ligne</div>
+            <div class="module-fonction">Validation ou refus par le responsable</div>
+            <div class="module-fonction">Calcul automatique des soldes</div>
+            <div class="module-fonction">Suivi des absences injustifiées</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Planning RH</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="module-card mod-4 reveal">
+        <div class="module-header">
+          <div class="module-num">04</div>
+          <div class="module-ico">📋</div>
+          <div class="module-titre">Recrutement</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Gérez tout le processus de recrutement, de la publication du poste à l'intégration du nouvel employé.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Publication d'offres d'emploi</div>
+            <div class="module-fonction">Réception et tri des candidatures</div>
+            <div class="module-fonction">Planification des entretiens</div>
+            <div class="module-fonction">Intégration automatique du candidat retenu</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Acquisition de talents</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 5 -->
+      <div class="module-card mod-5 reveal">
+        <div class="module-header">
+          <div class="module-num">05</div>
+          <div class="module-ico">🎓</div>
+          <div class="module-titre">Formations</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Planifiez et suivez les formations pour développer les compétences de votre équipe en continu.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Création de plans de formation</div>
+            <div class="module-fonction">Inscription et suivi des participants</div>
+            <div class="module-fonction">Gestion du budget formation</div>
+            <div class="module-fonction">Attestations et certifications</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Développement RH</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- Module 6 -->
+      <div class="module-card mod-6 reveal">
+        <div class="module-header">
+          <div class="module-num">06</div>
+          <div class="module-ico">⭐</div>
+          <div class="module-titre">Évaluations</div>
+        </div>
+        <div class="module-body">
+          <p class="module-desc">Organisez les entretiens annuels et suivez l'évolution des performances de chaque collaborateur.</p>
+          <div class="module-fonctions">
+            <div class="module-fonction">Création de grilles d'évaluation</div>
+            <div class="module-fonction">Entretiens annuels en ligne</div>
+            <div class="module-fonction">Suivi des objectifs fixés</div>
+            <div class="module-fonction">Historique des performances</div>
+          </div>
+        </div>
+        <div class="module-footer">
+          <span class="mod-tag">Performance</span>
+          <span class="mod-arrow">→</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FONCTIONNEMENT ===== -->
+<section id="fonctionnement">
+  <div class="section-inner">
+    <div class="section-tag">Comprendre l'application</div>
+    <h2 class="section-titre">Comment fonctionne RH Connect ?</h2>
+    <p class="section-sous">Trois angles pour tout comprendre : le flux d'un processus RH, les rôles des utilisateurs et le cycle de vie d'un employé.</p>
+
+    <div class="fonct-tabs reveal">
+      <button class="tab-btn active" onclick="switchTab('flux')">Flux d'un processus RH</button>
+      <button class="tab-btn"        onclick="switchTab('roles')">Rôles & Accès</button>
+      <button class="tab-btn"        onclick="switchTab('cycle')">Cycle de vie d'un employé</button>
+    </div>
+
+    <!-- TAB 1 : Flux -->
+    <div class="tab-content active" id="tab-flux">
+      <div class="flux-container">
+        <div class="flux-titre">Exemple : Traitement d'une demande de congé</div>
+        <div class="flux-diagram">
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">1</div>
+              <div class="flux-ico-wrap" style="background:#EFF6FF">🙋</div>
+            </div>
+            <div class="flux-label">Demande</div>
+            <div class="flux-sous">L'employé soumet sa demande en ligne</div>
+          </div>
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">2</div>
+              <div class="flux-ico-wrap" style="background:#F0FDF4">🔔</div>
+            </div>
+            <div class="flux-label">Notification</div>
+            <div class="flux-sous">Le responsable RH est alerté automatiquement</div>
+          </div>
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">3</div>
+              <div class="flux-ico-wrap" style="background:#FFFBEB">📊</div>
+            </div>
+            <div class="flux-label">Vérification</div>
+            <div class="flux-sous">Contrôle du solde de congés disponible</div>
+          </div>
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">4</div>
+              <div class="flux-ico-wrap" style="background:#FFF1F2">⚖️</div>
+            </div>
+            <div class="flux-label">Décision</div>
+            <div class="flux-sous">Approbation ou refus motivé du responsable</div>
+          </div>
+
+          <div class="flux-etape">
+            <div style="position:relative">
+              <div class="flux-step-num">5</div>
+              <div class="flux-ico-wrap" style="background:#F5F3FF">✅</div>
+            </div>
+            <div class="flux-label">Mise à jour</div>
+            <div class="flux-sous">Le planning et le solde sont mis à jour automatiquement</div>
+          </div>
+
+        </div>
+        <div class="flux-note">
+          <strong>À retenir :</strong> Tout ce processus se fait en ligne, sans papier ni e-mail. Chaque action est tracée et peut être consultée à tout moment.
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2 : Rôles -->
+    <div class="tab-content" id="tab-roles">
+      <div class="roles-grid">
+
+        <div class="role-card role-admin reveal">
+          <div class="role-badge">Administrateur</div>
+          <div class="role-titre">L'Administrateur Système</div>
+          <p style="font-size:.85rem;color:var(--gris-moyen);line-height:1.7">Il configure l'application, crée les comptes, définit les paramètres de l'entreprise et gère les droits d'accès.</p>
+          <div class="role-perms">
+            <div class="role-perm"><span class="ok">●</span> Gestion complète des utilisateurs</div>
+            <div class="role-perm"><span class="ok">●</span> Configuration des paramètres</div>
+            <div class="role-perm"><span class="ok">●</span> Accès à tous les modules</div>
+            <div class="role-perm"><span class="ok">●</span> Génération de tous les rapports</div>
+          </div>
+        </div>
+
+        <div class="role-card role-rh reveal">
+          <div class="role-badge">Responsable RH</div>
+          <div class="role-titre">Le Gestionnaire RH</div>
+          <p style="font-size:.85rem;color:var(--gris-moyen);line-height:1.7">Il gère le quotidien RH : fiches employés, paie, congés, recrutement, formations et évaluations.</p>
+          <div class="role-perms">
+            <div class="role-perm"><span class="ok">●</span> Gestion des fiches employés</div>
+            <div class="role-perm"><span class="ok">●</span> Validation des congés</div>
+            <div class="role-perm"><span class="ok">●</span> Traitement de la paie</div>
+            <div class="role-perm"><span class="non">●</span> Paramètres système (restreint)</div>
+          </div>
+        </div>
+
+        <div class="role-card role-emp reveal">
+          <div class="role-badge">Employé</div>
+          <div class="role-titre">Le Collaborateur</div>
+          <p style="font-size:.85rem;color:var(--gris-moyen);line-height:1.7">Il consulte ses propres informations, soumet ses demandes de congé et accède à ses bulletins de paie.</p>
+          <div class="role-perms">
+            <div class="role-perm"><span class="ok">●</span> Consultation de sa fiche</div>
+            <div class="role-perm"><span class="ok">●</span> Demandes de congé en ligne</div>
+            <div class="role-perm"><span class="ok">●</span> Accès à ses bulletins de paie</div>
+            <div class="role-perm"><span class="non">●</span> Données des autres employés</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:32px;padding:20px 24px;background:white;border-radius:var(--r-md);border:1px solid var(--bordure);">
+        <strong style="color:var(--bleu-nuit)">Principe de séparation des accès :</strong>
+        <p style="margin-top:6px;font-size:.875rem;color:var(--gris-moyen);line-height:1.75">
+          Chaque utilisateur n'a accès qu'aux informations dont il a besoin pour faire son travail. Un employé ne peut pas voir le salaire de son collègue. Un responsable RH ne peut pas modifier les paramètres du système. Cette règle garantit la confidentialité et la sécurité des données.
+        </p>
+      </div>
+    </div>
+
+    <!-- TAB 3 : Cycle -->
+    <div class="tab-content" id="tab-cycle">
+      <div class="cycle-wrap">
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">1</div>
+            <div class="cycle-ligne"></div>
+          </div>
+          <div class="cycle-content">
+            <h4>Recrutement</h4>
+            <p>Une offre d'emploi est publiée. Les candidatures arrivent et sont triées dans l'application. Après entretiens, le candidat retenu est sélectionné.</p>
+          </div>
+        </div>
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">2</div>
+            <div class="cycle-ligne"></div>
+          </div>
+          <div class="cycle-content">
+            <h4>Intégration (Onboarding)</h4>
+            <p>Le nouvel employé est automatiquement enregistré dans le système. Sa fiche est créée, son contrat est saisi, ses accès sont configurés.</p>
+          </div>
+        </div>
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">3</div>
+            <div class="cycle-ligne"></div>
+          </div>
+          <div class="cycle-content">
+            <h4>Vie active dans l'entreprise</h4>
+            <p>Chaque mois, son salaire est calculé et son bulletin de paie est généré. Il peut demander des congés, suivre des formations, être évalué chaque année.</p>
+          </div>
+        </div>
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">4</div>
+            <div class="cycle-ligne"></div>
+          </div>
+          <div class="cycle-content">
+            <h4>Évolution de carrière</h4>
+            <p>Ses évaluations et formations sont enregistrées. En cas de promotion ou changement de poste, sa fiche est mise à jour avec l'historique complet.</p>
+          </div>
+        </div>
+
+        <div class="cycle-etape reveal">
+          <div class="cycle-gauche">
+            <div class="cycle-num">5</div>
+          </div>
+          <div class="cycle-content">
+            <h4>Départ (Offboarding)</h4>
+            <p>Lors d'un départ (démission, retraite, fin de contrat), la fiche est archivée. Le solde de congés est calculé automatiquement pour le solde de tout compte.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GUIDE ===== -->
+<section id="guide">
+  <div class="section-inner">
+    <div class="section-tag">Mode d'emploi</div>
+    <h2 class="section-titre">Guide d'utilisation pas à pas</h2>
+    <p class="section-sous">Sélectionnez un module pour voir comment l'utiliser concrètement, étape par étape.</p>
+
+    <div class="guide-grid reveal">
+      <div class="guide-nav">
+        <div class="guide-nav-titre">Choisir un module</div>
+        <div class="guide-nav-items">
+          <button class="guide-nav-item actif" onclick="switchGuide('employes')"><span class="g-ico">👥</span> Gestion des employés</button>
+          <button class="guide-nav-item"       onclick="switchGuide('paie')">    <span class="g-ico">💰</span> Paie & Salaires</button>
+          <button class="guide-nav-item"       onclick="switchGuide('conges')">  <span class="g-ico">🏖️</span> Congés & Absences</button>
+          <button class="guide-nav-item"       onclick="switchGuide('recrutement')"><span class="g-ico">📋</span> Recrutement</button>
+          <button class="guide-nav-item"       onclick="switchGuide('formations')"><span class="g-ico">🎓</span> Formations</button>
+          <button class="guide-nav-item"       onclick="switchGuide('evaluations')"><span class="g-ico">⭐</span> Évaluations</button>
+        </div>
+      </div>
+
+      <div class="guide-contenu-wrap">
+
+        <!-- Employés -->
+        <div class="guide-panel actif" id="guide-employes">
+          <div class="guide-panel-titre">Gestion des Employés</div>
+          <div class="guide-panel-sous">Comment ajouter, modifier et consulter les informations d'un employé.</div>
+          <div class="etapes-liste">
+            <div class="etape-item">
+              <div class="etape-num-badge">1</div>
+              <div class="etape-texte">
+                <h5>Accéder au module Employés</h5>
+                <p>Depuis le tableau de bord, cliquez sur "Employés" dans le menu de gauche. La liste de tous les employés s'affiche.</p>
+              </div>
+            </div>
+            <div class="etape-item">
+              <div class="etape-num-badge">2</div>
+              <div class="etape-texte">
+                <h5>Ajouter un nouvel employé</h5>
+                <p>Cliquez sur le bouton "+ Nouvel employé" en haut à droite. Remplissez le formulaire : informations personnelles, poste, date d'embauche, type de contrat.</p>
+                <div class="etape-conseil">Conseil : Vérifiez le numéro d'identité avant d'enregistrer pour éviter les doublons dans la base de données.</div>
+              </div>
+            </div>
+            <div class="etape-item">
+              <div class="etape-num-badge">3</div>
+              <div class="etape-texte">
+                <h5>Modifier une fiche existante</h5>
+                <p>Cliquez sur le nom de l'employé dans la liste, puis sur "Modifier". Après vos changements, cliquez sur "Enregistrer".</p>
+              </div>
+            </div>
+            <div class="etape-item">
+              <div class="etape-num-badge">4</div>
+              <div class="etape-texte">
+                <h5>Rechercher un employé</h5>
+                <p>Utilisez la barre de recherche en haut de la liste. Vous pouvez filtrer par département, type de contrat ou statut (actif / en congé).</p>
+              </div>
+            </div>
+          </div>
+          <div class="ecran-mockup">
+            <div class="ecran-barre">
+              <div class="point p1"></div><div class="point p2"></div><div class="point p3"></div>
+              <div class="url-bar">rhconnect.app / employes</div>
+            </div>
+            <div class="ecran-corps">
+              <div class="ecran-sidebar">
+                <div class="ecran-sidebar-item sel">👥 Employés</div>
+                <div class="ecran-sidebar-item">💰 Paie</div>
+                <div class="ecran-sidebar-item">🏖️ Congés</div>
+                <div class="ecran-sidebar-item">📋 Recrutement</div>
+                <div class="ecran-sidebar-item">🎓 Formations</div>
+              </div>
+              <div class="ecran-main">
+                <div class="ecran-main-titre">Liste des employés (142)</div>
+                <table class="ecran-table">
+                  <tr><th>Nom</th><th>Poste</th><th>Département</th><th>Statut</th></tr>
+                  <tr><td>A. DIALLO</td><td>Comptable</td><td>Finance</td><td><span class="ecran-badge eb-actif">Actif</span></td></tr>
+                  <tr><td>F. SALL</td><td>Dev Web</td><td>Informatique</td><td><span class="ecran-badge eb-actif">Actif</span></td></tr>
+                  <tr><td>M. NDIAYE</td><td>RH Manager</td><td>RH</td><td><span class="ecran-badge eb-conge">Congé</span></td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paie -->
+        <div class="guide-panel" id="guide-paie">
+          <div class="guide-panel-titre">Paie & Salaires</div>
+          <div class="guide-panel-sous">Comment générer les bulletins de paie mensuels.</div>
+          <div class="etapes-liste">
+            <div class="etape-item"><div class="etape-num-badge">1</div><div class="etape-texte"><h5>Ouvrir le module Paie</h5><p>Dans le menu, cliquez sur "Paie". Sélectionnez le mois et l'année de la paie à traiter.</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">2</div><div class="etape-texte"><h5>Vérifier les données du mois</h5><p>L'application récupère automatiquement les absences et congés du mois. Vérifiez les heures supplémentaires et les primes à ajouter.</p><div class="etape-conseil">Conseil : Vérifiez d'abord le module Congés pour vous assurer que toutes les absences ont bien été enregistrées.</div></div></div>
+            <div class="etape-item"><div class="etape-num-badge">3</div><div class="etape-texte"><h5>Lancer le calcul</h5><p>Cliquez sur "Calculer la paie". L'application génère automatiquement le salaire brut, les cotisations et le salaire net pour chaque employé.</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">4</div><div class="etape-texte"><h5>Valider et diffuser</h5><p>Après vérification, cliquez sur "Valider et envoyer". Chaque employé reçoit son bulletin de paie au format PDF dans son espace personnel.</p></div></div>
+          </div>
+        </div>
+
+        <!-- Congés -->
+        <div class="guide-panel" id="guide-conges">
+          <div class="guide-panel-titre">Congés & Absences</div>
+          <div class="guide-panel-sous">Comment traiter une demande de congé de A à Z.</div>
+          <div class="etapes-liste">
+            <div class="etape-item"><div class="etape-num-badge">1</div><div class="etape-texte"><h5>Recevoir une demande</h5><p>Lorsqu'un employé soumet une demande, vous recevez une notification. Allez dans "Congés > Demandes en attente".</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">2</div><div class="etape-texte"><h5>Vérifier le solde</h5><p>Consultez le solde de congés disponible de l'employé affiché automatiquement sur la demande.</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">3</div><div class="etape-texte"><h5>Approuver ou refuser</h5><p>Cliquez sur "Approuver" ou "Refuser". En cas de refus, saisissez un motif qui sera transmis à l'employé.</p><div class="etape-conseil">Conseil : Consultez le planning de l'équipe avant d'approuver pour éviter les absences simultanées.</div></div></div>
+            <div class="etape-item"><div class="etape-num-badge">4</div><div class="etape-texte"><h5>Mise à jour automatique</h5><p>Le planning et le solde de congés sont mis à jour instantanément. L'employé est notifié de la décision.</p></div></div>
+          </div>
+        </div>
+
+        <!-- Recrutement -->
+        <div class="guide-panel" id="guide-recrutement">
+          <div class="guide-panel-titre">Recrutement</div>
+          <div class="guide-panel-sous">Comment gérer un processus de recrutement de bout en bout.</div>
+          <div class="etapes-liste">
+            <div class="etape-item"><div class="etape-num-badge">1</div><div class="etape-texte"><h5>Créer une offre d'emploi</h5><p>Allez dans "Recrutement > Nouvelle offre". Renseignez le titre du poste, le département, les responsabilités et le profil recherché.</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">2</div><div class="etape-texte"><h5>Gérer les candidatures</h5><p>Les candidatures reçues apparaissent dans l'onglet "Candidatures". Vous pouvez les classer par statut : à étudier, shortlisté, entretien prévu, rejeté.</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">3</div><div class="etape-texte"><h5>Planifier les entretiens</h5><p>Pour chaque candidat retenu, cliquez sur "Planifier entretien" et choisissez une date. Une invitation est envoyée automatiquement.</p><div class="etape-conseil">Conseil : Rédigez vos questions d'entretien dans les notes de l'offre pour garder une cohérence entre les entretiens.</div></div></div>
+            <div class="etape-item"><div class="etape-num-badge">4</div><div class="etape-texte"><h5>Intégrer le candidat retenu</h5><p>Sélectionnez le candidat et cliquez sur "Intégrer comme employé". Sa fiche est automatiquement pré-remplie avec ses informations.</p></div></div>
+          </div>
+        </div>
+
+        <!-- Formations -->
+        <div class="guide-panel" id="guide-formations">
+          <div class="guide-panel-titre">Formations</div>
+          <div class="guide-panel-sous">Comment planifier et suivre les formations de votre équipe.</div>
+          <div class="etapes-liste">
+            <div class="etape-item"><div class="etape-num-badge">1</div><div class="etape-texte"><h5>Créer un plan de formation</h5><p>Dans "Formations > Nouveau programme", saisissez le titre, les objectifs, la durée, le prestataire et le coût de la formation.</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">2</div><div class="etape-texte"><h5>Inscrire les participants</h5><p>Cliquez sur "+ Ajouter des participants" et sélectionnez les employés concernés dans la liste. Ils reçoivent une notification automatique.</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">3</div><div class="etape-texte"><h5>Suivre la progression</h5><p>Pendant et après la formation, marquez la présence des participants et saisissez les résultats obtenus.</p><div class="etape-conseil">Conseil : Demandez un compte-rendu aux participants à la fin de chaque formation pour améliorer les prochaines sessions.</div></div></div>
+            <div class="etape-item"><div class="etape-num-badge">4</div><div class="etape-texte"><h5>Générer les attestations</h5><p>Une fois la formation terminée, cliquez sur "Générer attestations". Les certificats PDF sont envoyés automatiquement aux participants.</p></div></div>
+          </div>
+        </div>
+
+        <!-- Évaluations -->
+        <div class="guide-panel" id="guide-evaluations">
+          <div class="guide-panel-titre">Évaluations de Performance</div>
+          <div class="guide-panel-sous">Comment conduire les entretiens annuels d'évaluation.</div>
+          <div class="etapes-liste">
+            <div class="etape-item"><div class="etape-num-badge">1</div><div class="etape-texte"><h5>Créer une grille d'évaluation</h5><p>Dans "Évaluations > Grilles", créez votre modèle : compétences techniques, comportementales, atteinte des objectifs, axes de progrès.</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">2</div><div class="etape-texte"><h5>Lancer la campagne d'évaluation</h5><p>Sélectionnez les employés à évaluer et la grille à utiliser. Cliquez sur "Lancer". Chaque manager reçoit la liste de ses collaborateurs à évaluer.</p></div></div>
+            <div class="etape-item"><div class="etape-num-badge">3</div><div class="etape-texte"><h5>Remplir les évaluations</h5><p>Le manager remplit la grille en ligne et y consigne les points forts, les axes de progrès et les objectifs pour l'année suivante.</p><div class="etape-conseil">Conseil : Partagez la grille avec l'employé avant l'entretien pour qu'il puisse préparer son auto-évaluation.</div></div></div>
+            <div class="etape-item"><div class="etape-num-badge">4</div><div class="etape-texte"><h5>Valider et archiver</h5><p>Après l'entretien, les deux parties signent électroniquement. L'évaluation est archivée dans la fiche de l'employé.</p></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GLOSSAIRE ===== -->
+<section id="glossaire">
+  <div class="section-inner">
+    <div class="section-tag">Vocabulaire RH</div>
+    <h2 class="section-titre">Glossaire des termes RH</h2>
+    <p class="section-sous">Les mots essentiels de la gestion des ressources humaines expliqués simplement.</p>
+
+    <div class="glossaire-search-wrap reveal">
+      <span class="glossaire-search-ico">🔍</span>
+      <input class="glossaire-search" type="text" placeholder="Rechercher un terme..." id="gloSearch" oninput="filtrerGlossaire()">
+    </div>
+
+    <div class="glossaire-lettres reveal" id="gloLettres"></div>
+
+    <div id="gloContenu"></div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-tag">Questions fréquentes</div>
+    <h2 class="section-titre">Vous avez des questions ?</h2>
+    <p class="section-sous">Voici les réponses aux questions les plus fréquemment posées sur RH Connect.</p>
+
+    <div class="faq-grid reveal">
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Faut-il une formation pour utiliser RH Connect ? <div class="fleche">▼</div></div>
+        <div class="faq-r"><p>Non. L'interface a été conçue pour être intuitive. La prise en main est rapide, même pour quelqu'un qui n'est pas informaticien. Ce guide et les tutoriels intégrés suffisent pour démarrer.</p></div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Les données des employés sont-elles sécurisées ? <div class="fleche">▼</div></div>
+        <div class="faq-r"><p>Oui. Toutes les données sont chiffrées et stockées de manière sécurisée. Chaque utilisateur ne voit que ce que son rôle lui autorise. Les accès sont tracés et peuvent être audités.</p></div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Un employé peut-il voir le salaire de ses collègues ? <div class="fleche">▼</div></div>
+        <div class="faq-r"><p>Absolument pas. Le module paie est réservé aux administrateurs et aux responsables RH. Chaque employé n'a accès qu'à ses propres bulletins de paie.</p></div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Peut-on utiliser RH Connect sur un téléphone ? <div class="fleche">▼</div></div>
+        <div class="faq-r"><p>Oui. L'application est entièrement responsive, ce qui signifie qu'elle s'adapte automatiquement à la taille de l'écran : ordinateur, tablette ou smartphone.</p></div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Comment sont calculés les soldes de congés ? <div class="fleche">▼</div></div>
+        <div class="faq-r"><p>Le calcul est automatique et basé sur la date d'embauche et le type de contrat. Il respecte les règles du Code du Travail en vigueur. Chaque congé approuvé déduit automatiquement les jours du solde.</p></div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Que se passe-t-il si on fait une erreur dans la paie ? <div class="fleche">▼</div></div>
+        <div class="faq-r"><p>Tant que la paie n'est pas validée définitivement, elle peut être corrigée librement. Après validation, une paie rectificative peut être créée pour corriger l'erreur avec traçabilité complète.</p></div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Combien d'employés peut gérer RH Connect ? <div class="fleche">▼</div></div>
+        <div class="faq-r"><p>L'application est conçue pour s'adapter à la taille de l'entreprise, que vous ayez 10 ou 500 employés. L'architecture permet une montée en charge progressive sans perte de performance.</p></div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Comment sont gérés les départs d'employés ? <div class="fleche">▼</div></div>
+        <div class="faq-r"><p>Lors d'un départ, la fiche de l'employé passe en statut "Archivé". Son solde de congés restant est calculé automatiquement pour le solde de tout compte. Toutes ses données restent accessibles pour consultation.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ÉQUIPE ===== -->
+<section id="equipe">
+  <div class="section-inner">
+    <div class="section-tag">L'équipe projet</div>
+    <h2 class="section-titre">Les créateurs de RH Connect</h2>
+    <p class="section-sous">Une équipe pluridisciplinaire d'étudiants en L2 Informatique Appliquée à la Gestion des Entreprises à l'ISI de Dakar.</p>
+
+    <div class="equipe-grid">
+
+      <div class="equipe-card reveal">
+        <div class="equipe-avatar av-1">
+          <div class="equipe-initiales">NC</div>
+        </div>
+        <div class="equipe-info">
+          <div class="equipe-nom">Nsieni Claire</div>
+          <div class="equipe-role">Développeur Front-End & Intégratrice</div>
+          <p class="equipe-desc">Responsable de l'interface utilisateur, de l'expérience visuelle et de l'intégration des maquettes en code.</p>
+          <div class="equipe-competences">
+            <span class="comp-tag">HTML / CSS</span>
+            <span class="comp-tag">JavaScript</span>
+            <span class="comp-tag">UI Design</span>
+            <span class="comp-tag">Responsive</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="equipe-card reveal">
+        <div class="equipe-avatar av-2">
+          <div class="equipe-initiales">AN</div>
+        </div>
+        <div class="equipe-info">
+          <div class="equipe-nom">Abdou Ndiaye</div>
+          <div class="equipe-role">Responsable IA & Data</div>
+          <p class="equipe-desc">En charge des fonctionnalités intelligentes de l'application : analyse des données RH, tableaux de bord et recommandations.</p>
+          <div class="equipe-competences">
+            <span class="comp-tag">Data Analysis</span>
+            <span class="comp-tag">IA / ML</span>
+            <span class="comp-tag">Tableaux de bord</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="equipe-card reveal">
+        <div class="equipe-avatar av-3">
+          <div class="equipe-initiales">KN</div>
+        </div>
+        <div class="equipe-info">
+          <div class="equipe-nom">Khady Niang Diop </div>
+          <div class="equipe-role">Responsable Qualité & Documentation</div>
+          <p class="equipe-desc">Garant de la qualité de l'application : tests fonctionnels, rédaction de la documentation et validation des livrables.</p>
+          <div class="equipe-competences">
+            <span class="comp-tag">Tests & QA</span>
+            <span class="comp-tag">Documentation</span>
+            <span class="comp-tag">Cahier des charges</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="equipe-card reveal">
+        <div class="equipe-avatar av-4">
+          <div class="equipe-initiales">ET</div>
+        </div>
+        <div class="equipe-info">
+          <div class="equipe-nom">El Hadji Omar Thiam</div>
+          <div class="equipe-role">Développeur Back-End & Intégrateur</div>
+          <p class="equipe-desc">Responsable de la logique serveur, de la base de données, des API et de l'intégration complète des modules.</p>
+          <div class="equipe-competences">
+            <span class="comp-tag">Back-End</span>
+            <span class="comp-tag">Base de données</span>
+            <span class="comp-tag">API</span>
+            <span class="comp-tag">Sécurité</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="equipe-contexte reveal">
+      <div class="ctx-texte">
+        <h3>Projet académique ISI Dakar</h3>
+        <p>RH Connect est le projet de fin d'année des étudiants de Licence 2 en Informatique Appliquée à la Gestion des Entreprises (IAGE) à l'Institut Supérieur d'Informatique de Dakar.</p>
+        <p>Ce projet répond à un problème réel : de nombreuses entreprises sénégalaises gèrent encore leur personnel avec des outils inadaptés (Excel, papier). RH Connect propose une solution moderne, accessible et adaptée au contexte local.</p>
+        <div class="ctx-badge">🏛️ Institut Supérieur d'Informatique — ISI Dakar</div>
+      </div>
+      <div class="ctx-stats">
+        <div class="ctx-stat"><div class="val">4</div><div class="lbl">Étudiants dans l'équipe</div></div>
+        <div class="ctx-stat"><div class="val">6</div><div class="lbl">Modules développés</div></div>
+        <div class="ctx-stat"><div class="val">L2</div><div class="lbl">Niveau académique</div></div>
+        <div class="ctx-stat"><div class="val">2025</div><div class="lbl">Année du projet</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">
+        <div class="footer-logo-badge">RH</div>
+        <div class="footer-logo-txt">RH Connect</div>
+      </div>
+      <p class="footer-desc">Application de gestion des ressources humaines développée par les étudiants de L2 IAGE à l'ISI de Dakar. Un outil moderne pour simplifier la gestion du personnel.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <span style="background:rgba(255,255,255,.1);padding:5px 12px;border-radius:6px;font-size:.75rem;color:rgba(255,255,255,.7)">HTML5</span>
+        <span style="background:rgba(255,255,255,.1);padding:5px 12px;border-radius:6px;font-size:.75rem;color:rgba(255,255,255,.7)">CSS3</span>
+        <span style="background:rgba(255,255,255,.1);padding:5px 12px;border-radius:6px;font-size:.75rem;color:rgba(255,255,255,.7)">JavaScript</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="#accueil">Accueil</a>
+      <a href="#presentation">À propos</a>
+      <a href="#modules">Les modules</a>
+      <a href="#fonctionnement">Fonctionnement</a>
+      <a href="#guide">Guide d'utilisation</a>
+    </div>
+    <div class="footer-col">
+      <h4>Ressources</h4>
+      <a href="#glossaire">Glossaire RH</a>
+      <a href="#faq">FAQ</a>
+      <a href="#equipe">L'équipe</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 <span class="footer-isi">ISI Dakar — L2 IAGE</span> — RH Connect</span>
+    <span>Projet académique — Tous droits réservés</span>
+  </div>
+</footer>
+<script src="js/style.js"></script>
+</body>
+</html>
